@@ -60,7 +60,6 @@ public class CadastrarUsuarios extends javax.swing.JFrame {
         mostrarsenha = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setType(java.awt.Window.Type.UTILITY);
 
         login.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         login.setText("usuario");
@@ -219,6 +218,7 @@ public class CadastrarUsuarios extends javax.swing.JFrame {
            if(cadastrar.getText().equals("Cadastrar")){
             int r=Controlador.cadastrarUsuario(login.getText(),paraString(senha1.getPassword()),paraString(senha2.getPassword()),email.getText(),dataNascimento.getText());
             if(r==1){
+                this.dispose();
                 JOptionPane.showMessageDialog(null, "Usuario cadastrado");
             }else if(r==2){
                 JOptionPane.showMessageDialog(null, "Senhas não identicas");
@@ -229,6 +229,7 @@ public class CadastrarUsuarios extends javax.swing.JFrame {
         }else if (cadastrar.getText().equals("Atualizar")){
             int r=Controlador.atualizarUsuario(usuario.getId(),login.getText(),paraString(senha1.getPassword()),paraString(senha2.getPassword()),email.getText(),dataNascimento.getText());
             if(r==1){
+                this.dispose();
                 JOptionPane.showMessageDialog(null, "Usuario Atualizado");
             }else if(r==2){
                  JOptionPane.showMessageDialog(null, "Senhas não identicas");

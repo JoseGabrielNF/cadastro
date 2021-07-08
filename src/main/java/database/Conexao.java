@@ -14,10 +14,10 @@ import java.io.IOException;
 public class Conexao {
 
     public static void firebase() throws FileNotFoundException, IOException {
-        FileInputStream serviceAccount = new FileInputStream("cadastrarusuarios.json");
+        FileInputStream serviceAccount = new FileInputStream("cadastrochave.json");
         FirebaseOptions options = new FirebaseOptions.Builder()
   .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-  .setDatabaseUrl("https://cadastrarusuarios-5185f-default-rtdb.firebaseio.com")
+  .setDatabaseUrl("https://cadastro-f878e-default-rtdb.firebaseio.com")
   .build();
 
         FirebaseApp.initializeApp(options);
