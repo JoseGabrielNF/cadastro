@@ -1,8 +1,7 @@
-# cadastro
-CRUD simples com JavaSwing padrão MVC utilizando o Firebase.
-VideoTutorial:
-Passo 1
-  git clone https://github.com/JoseGabrielNF/cadastro
-Passo 2
-  Criar chave firebase e colocar na pasta raiz.
+# Cadastro
+CRUD simples com JavaSwing padrão MVC utilizando o Firebase.  
+VideoTutorial:`https://www.youtube.com/`  
+# Executar  
+- git clone `https://github.com/JoseGabrielNF/cadastro`    
+- Configurar chave firebase e colocar na pasta raiz.
  
